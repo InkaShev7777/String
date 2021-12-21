@@ -92,10 +92,10 @@ int main()
             }*/
             for (int i = 0;i < str.length();i++)
             {
-                if (str[i] == 'H' && str[i + 1] == 'e' && str[i + 2] == 'l' && str[i + 3] == 'l' && str[i + 4] == 'o')
+                if ((str[i] == 'H' && str[i + 1] == 'e' && str[i + 2] == 'l' && str[i + 3] == 'l' && str[i + 4] == 'o' && str[i+5] == ',') || (str[i] == 'H' && str[i + 1] == 'e' && str[i + 2] == 'l' && str[i + 3] == 'l' && str[i + 4] == 'o' && str[i + 5] == ' '))
                 {
                     kol_hello++;
-                    i += 4;
+                    i += 5;
                 }
             }
             cout << "Kol_hello: " << kol_hello << "\n";
