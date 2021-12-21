@@ -7,13 +7,14 @@ int main()
     string str;
     cout << "VVedite text: ";
     getline(cin, str);
-    cout << str << "\n";
+    
     int kol_razd = 0;
     int vibor;
     int kol_bukv = 0;
     int kol_cifir = 0;
     do
     {
+        cout << str << "\n\n\n";
         cout << "\tMenu\n";
         cout << "1 - Kol.razd.znakov\n";
         cout << "2 - Kol.bukv\n";
@@ -26,6 +27,7 @@ int main()
         switch (vibor)
         {
         case 1:
+            kol_razd = 0;
             system("cls");
             for (int i = 0;i < str.length();i++)
             {
@@ -40,6 +42,7 @@ int main()
             break;
         case 2:
             system("cls");
+            kol_bukv = 0;
             for (int i = 0;i <= str.length();i++)
             {
                 if (str[i] >= 'A' && str[i] <= 'Z'|| str[i] >= 'a' && str[i] <= 'z')
@@ -80,7 +83,22 @@ int main()
             break;
         case 5:
             system("cls");
-
+            int kol_hello = 0;
+            /*size_t found = str.find("Hello");
+            while (found < str.length())
+            {
+                found = str.find("Hello",found+1);
+                kol_hello++;
+            }*/
+            for (int i = 0;i < str.length();i++)
+            {
+                if (str[i] == 'H' && str[i + 1] == 'e' && str[i + 2] == 'l' && str[i + 3] == 'l' && str[i + 4] == 'o')
+                {
+                    kol_hello++;
+                    i += 4;
+                }
+            }
+            cout << "Kol_hello: " << kol_hello << "\n";
             system("pause");
             system("cls");
             break;
